@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
 });
+const navigate = useNavigate();
 
 const handleChange = (e) => {
     setFormData({
@@ -14,10 +16,19 @@ const handleChange = (e) => {
     });
 };
 
-const handleSubmit = (e) => {
+const handleSubmit = async(e) => {
     e.preventDefault();
+try {
+     await axios.post("http://localhost:8080/api/auth/contact",formData);
+      navigate("/");
+      window.alert("we will reach you sooner")
+
     // Add your logic to handle the form submission here
     console.log('Form submitted:', formData);
+} catch (error) {
+    console.log(error);
+}
+   
 };
 
   return (

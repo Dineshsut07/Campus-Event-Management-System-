@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   useEffect(() => {
@@ -38,7 +39,7 @@ const Hero = () => {
     /></span>
         </p>
         <button className="px-4 py-2 font-medium text-white transition-all bg-pink-600 rounded hover:bg-pink-800 hover:shadow-pink-800 hover:shadow-2xl active:scale-105">
-         Participate Now!
+          <Link to={"/events"}>Participate Now!</Link>
         </button>
       </div>
       <ShuffleGrid />
@@ -83,19 +84,19 @@ const squareData = [
   },
   {
     id: 5,
-    src:"/1.png",
-  },
-  {
-    id: 6,
     src:"/6.png",
   },
   {
+    id: 6,
+    src:"/7.png",
+  },
+  {
     id: 7,
-    src:"/2.png",
+    src:"/1.png",
   },
   {
     id: 8,
-    src:"/8.png",
+    src:"/3.png",
   },
   {
     id: 9,
@@ -103,19 +104,19 @@ const squareData = [
   },
   {
     id: 10,
-    src:"/7.png",
+    src:"/dance.jpg",
   },
   {
     id: 11,
-    src:"/3.png",
+    src:"/coding.jpg",
   },
   {
     id: 12,
-    src:"/1.png",
+    src:"/t3.jpg",
   },
   {
     id: 13,
-    src:"/10.png",
+    src:"/crypto1.png",
   },
   {
     id: 14,
@@ -123,11 +124,15 @@ const squareData = [
   },
   {
     id: 15,
-    src:"/12.png",
+    src:"/2.png",
   },
   {
     id: 16,
-    src:"/6.png",
+    src:"/10.png",
+  },
+  {
+    id: 17,
+    src:"/8.png",
   },
 ];
 

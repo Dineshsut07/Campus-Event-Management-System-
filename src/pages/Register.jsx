@@ -33,6 +33,7 @@ const Register = () => {
     }
   };
   
+  
   return (
     <div className="flex items-center justify-center h-[100vh] bg-black ">
     <div className="form-container w-[390px] ">

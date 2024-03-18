@@ -8,19 +8,19 @@ const LatestEvent = () => {
     <h2 className='text-2xl text-center text-white lg:text-6xl md:text-4xl p-7'>Latest<span className='font-extrabold text-pink-700'>Events</span></h2>
      <div className="flex items-center justify-center ">
      <LatestCard
-                title="Sample Card"
-                description="This is a sample card component built with React and Tailwind CSS."
-                imageUrl="/6.png"
+                title="Hackathon"
+                description="Hackathon on web development"
+                img="/t1.jpg"
             />
      <LatestCard
-                title="Sample Card"
-                description="This is a sample card component built with React and Tailwind CSS."
-                imageUrl="/11.png"
+                title="Muscular challenge"
+                description="Event to showcase the physical strength"
+                img="/11.png"
             />
      <LatestCard
-                title="Sample Card"
-                description="This is a sample card component built with React and Tailwind CSS."
-                imageUrl="/9.png"
+                title="Technical paper presentation"
+                description=" To make a research paper on technical field"
+                img="/t3.jpg"
             />
       
       </div> 

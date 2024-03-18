@@ -13,6 +13,14 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Event from "./pages/Event";
+import CreateEvent from "./components/CreateEvent";
+import Gallery from "./pages/Gallery";
+import SingleEvent from "./components/SingleEvent";
+import AboutUs from "./pages/Aboutus";
+import Account from "./pages/Account";
+import Myparticipants from "./components/MyParticipants";
+
+
 // import Footer from "./components/footer/Footer";
 const Layout = () => {
   return (
@@ -25,7 +33,8 @@ const Layout = () => {
       <div className="">
         <Outlet />
       </div>
-       {/* <Footer/> */}
+      
+       <Footer/>
     </>
   );
 };
@@ -42,6 +51,32 @@ const router = createBrowserRouter([
         path: "/events",
         element: <Event/>,
       },
+      {
+        path: "/createevent",
+        element: <CreateEvent/>,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery/>,
+      },
+      {
+        path: "/events/:id",
+        element: <SingleEvent/>,
+      },
+      {
+        path: "/about",
+        element: <AboutUs/>,
+      },
+      {
+        path: "/account",
+        element: <Account/>,
+      },
+      {
+        path: "/myevents",
+        element: <Myparticipants/>,
+      },
+
+      
     ],
   },
   {
@@ -56,9 +91,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-    
         <RouterProvider router={router} />
-      
     </>
   );
 }
